@@ -1,0 +1,43 @@
+{{#if isAuthorized}}
+  <div class="container">
+    <div class="header__content">
+      <a href="/" class="header">ElbrusKino</a>
+      <a href="/pers" class="header">Личный кабинет</a>
+      <a href="/logout" class="header">Выйти</a>
+      <form id="searchId">
+        <input class="header__search" type="text" placeholder="Поиск" />
+      </form>
+    </div>
+  </div>
+{{#each films}} 
+  <div class="card">
+    {{!-- <iframe is="x-frame-bypass" src="https://widgets.kinopoisk.ru/discovery/trailer/167560?onlyPlayer=1&autoplay=1&cover=1" width="500" height="500"></iframe> --}}
+    <div class="movies"></div>
+  </div>
+{{/each}}
+<div class="pagiStr">
+  <button value="1" class="button">1</button>
+  <button value="2" class="button">2</button>
+  <button value="3" class="button">3</button>
+  <button value="4" class="button">4</button>
+  <button value="5" class="button">5</button>
+</div>
+{{else}}
+<div class="container">
+  <div class="header__content">
+    <a href="/" class="header">ElbrusKino</a>
+    <a href="/login" class="header">Авторизоваться</a>
+    <a href="/reg" class="header">Зарегистрироваться</a>
+  </div>
+</div>
+{{#each films}} 
+  <div class="card">
+    <div class="movies"></div>
+  </div>
+{{/each}}
+{{/if}}
+
+
+
+
+

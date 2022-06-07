@@ -1,0 +1,14 @@
+<a href="/">На главную</a>
+{{#each books}} 
+  
+     <div class="bbb">
+      
+         <h3>
+           {{title}}
+         </h3>
+         <p>{{description}}</p>
+         <img src="{{link}}" alt="foto">
+         <a href="/delete/{{this.id}}" class="delete" id="{{this.id}}"><button>Удалить</button></a>
+          <a href="/bookEdit/{{this.id}}"><button>Редактировать</button></a> 
+   </div>
+  {{/each}}
